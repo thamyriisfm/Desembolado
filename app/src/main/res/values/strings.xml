@@ -15,16 +15,17 @@
   -->
 
 <resources>
-    <string name="app_name">Unscramble</string>
-    <string name="instructions">Unscramble the word using all the letters.</string>
-    <string name="skip">Skip</string>
-    <string name="submit">Submit</string>
-    <string name="score">Score: %d</string>
-    <string name="word_count">%d of %d words</string>
-    <string name="enter_your_word">Enter your word</string>
-    <string name="congratulations">Congratulations!</string>
-    <string name="you_scored">"You scored: %d"</string>
-    <string name="exit">Exit</string>
-    <string name="play_again">Play Again</string>
-    <string name="try_again">Try again!</string>
+    <string name="app_name">Desembalado</string>
+    <string name="instructions">Desembaralhe a palavra usando todas as letras.</string>
+    <string name="skip">Pular</string>
+    <string name="submit">Jogar</string>
+    <string name="score">Pontuação: %d</string>
+    <string name="word_count">%d de %d palavras</string>
+    <string name="enter_your_word">Entre com sua palavra</string>
+    <string name="congratulations">Parabéns!</string>
+    <string name="you_scored">"Sua pontuação: %d"</string>
+    <string name="exit">Sair</string>
+    <string name="play_again">Jogar Novamente</string>
+    <string name="try_again">Tentar novamente!</string>
+    <string name="ok">ok</string>
 </resources>
