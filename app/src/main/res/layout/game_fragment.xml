@@ -120,6 +120,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/default_margin"
                 android:hint="@string/enter_your_word"
+                android:textColorHint="@color/material_dynamic_tertiary30"
                 app:errorIconDrawable="@drawable/ic_error"
                 app:helperTextTextAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
                 app:layout_constraintBottom_toTopOf="@+id/submit"
@@ -131,6 +132,7 @@
                     android:id="@+id/text_input_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:textColor="@color/material_dynamic_tertiary30"
                     android:inputType="textPersonName|textNoSuggestions"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>

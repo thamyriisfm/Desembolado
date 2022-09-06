@@ -48,4 +48,6 @@ dependencies {
     implementation 'androidx.fragment:fragment-ktx:1.5.2'
     // Material 3
     implementation 'com.google.android.material:material:1.6.1'
+    // SplashScreen
+    implementation 'androidx.core:core-splashscreen:1.0.0'
 }

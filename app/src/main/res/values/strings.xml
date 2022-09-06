@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Desembalado</string>
+    <string name="app_name">Desembaralhado</string>
     <string name="instructions">Desembaralhe a palavra usando todas as letras.</string>
     <string name="skip">Pular</string>
     <string name="submit">Jogar</string>
