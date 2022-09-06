@@ -17,9 +17,9 @@
 
 <resources>
     <style name="Widget.Unscramble.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeErrorColor">@color/red_400</item>
-        <item name="errorIconTint">@color/red_400</item>
-        <item name="errorTextColor">@color/red_400</item>
+        <item name="boxStrokeErrorColor">@color/design_default_color_error</item>
+        <item name="errorIconTint">@color/design_default_color_error</item>
+        <item name="errorTextColor">@color/design_default_color_error</item>
         <item name="errorIconDrawable">@drawable/ic_error</item>
         <item name="helperTextTextAppearance">@style/TextAppearance.MaterialComponents.Subtitle1</item>
     </style>

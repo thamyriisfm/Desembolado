@@ -19,9 +19,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="gameViewModel"
             type="com.example.android.unscramble.ui.game.GameViewModel" />
+
         <variable
             name="maxNoOfWords"
             type="int" />
@@ -64,6 +66,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/instructions"
+                android:textAlignment="center"
+                android:textColor="@color/md_theme_light_secondary"
                 android:textSize="17sp"
                 app:layout_constraintBottom_toTopOf="@+id/textField"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -78,6 +82,7 @@
                 android:layout_marginBottom="@dimen/default_margin"
                 android:text="@{gameViewModel.currentScrambledWord}"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+                android:textColor="@color/seed"
                 app:layout_constraintBottom_toTopOf="@+id/textView_instructions"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -90,6 +95,7 @@
                 android:layout_height="wrap_content"
                 android:text="@{@string/word_count(gameViewModel.currentWordCount, maxNoOfWords)}"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/md_theme_light_onPrimaryContainer"
                 app:layout_constraintBottom_toTopOf="@+id/textView_unscrambled_word"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -102,6 +108,7 @@
                 android:text="@{@string/score(gameViewModel.score)}"
                 android:textAllCaps="true"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/md_theme_light_onPrimaryContainer"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Score: 20" />
