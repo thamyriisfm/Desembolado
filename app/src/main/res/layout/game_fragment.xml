@@ -84,10 +84,20 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
                 android:textColor="@color/seed"
                 app:layout_constraintBottom_toTopOf="@+id/textView_instructions"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/bt_refresh"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/word_count"
                 tools:text="Scramble word" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/bt_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_refresh"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textView_unscrambled_word"
+                app:layout_constraintTop_toTopOf="@id/textView_unscrambled_word"
+                app:layout_constraintBottom_toBottomOf="@id/textView_unscrambled_word"/>
 
             <TextView
                 android:id="@+id/word_count"
@@ -132,9 +142,9 @@
                     android:id="@+id/text_input_edit_text"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:textColor="@color/material_dynamic_tertiary30"
                     android:inputType="textPersonName|textNoSuggestions"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:textColor="@color/material_dynamic_tertiary30" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
