@@ -1,19 +1,3 @@
-/*
- * Copyright (C) 2020 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and 
- * limitations under the License.
- */
-
 package com.example.android.unscramble.ui.game
 
 import android.os.Bundle
@@ -28,10 +12,6 @@ import com.example.android.unscramble.R
 import com.example.android.unscramble.databinding.GameFragmentBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-
-/**
- * Fragment where the game is played, contains the game logic.
- */
 class GameFragment : Fragment() {
 
     // Binding object instance with access to the views in the game_fragment.xml layout
@@ -63,8 +43,18 @@ class GameFragment : Fragment() {
         binding.lifecycleOwner = viewLifecycleOwner
 
         // Setup a click listener for the Submit and Skip buttons.
+        setupListeners()
+
+    }
+
+    private fun setupListeners() {
         binding.submit.setOnClickListener { onSubmitWord() }
         binding.skip.setOnClickListener { onSkipWord() }
+        binding.btRefresh.setOnClickListener { onRefreshWord() }
+    }
+
+    private fun onRefreshWord() {
+        viewModel.reshuffleWord()
     }
 
     /*
@@ -73,7 +63,7 @@ class GameFragment : Fragment() {
     * After the last word, the user is shown a Dialog with the final score.
     */
     private fun onSubmitWord() {
-        val playerWord = binding.textInputEditText.text.toString()
+        val playerWord = binding.textInputEditText.text?.trim().toString()
 
         if (viewModel.isUserWordCorrect(playerWord)) {
             setErrorTextField(false)

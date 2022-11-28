@@ -83,6 +83,17 @@ class GameViewModel : ViewModel() {
         }
     }
 
+    fun reshuffleWord() {
+        val tempWord = currentWord.toCharArray()
+        tempWord.shuffle()
+        while (String(tempWord) == currentWord || String(tempWord) == _currentScrambledWord.value) {
+            tempWord.shuffle()
+        }
+        if (String(tempWord) != currentWord || String(tempWord) != _currentScrambledWord.value) {
+            _currentScrambledWord.value = String(tempWord)
+        }
+    }
+
     /*
      * Re-initializes the game data to restart the game.
      */
